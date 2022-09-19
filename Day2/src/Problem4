@@ -1,0 +1,63 @@
+a.) 
+   class Test {
+    int a, b;
+
+	Test(){
+		this(2, 4);
+	}
+
+	Test(int a, int b){
+		this();
+	}
+    public static void main(String[] args) {
+       Test a = new Test();
+    }
+  }
+  
+  output: it gives error of recursive constructor.
+  
+b.) 
+   Class Animal(){
+
+	String name;
+
+	Animal(){
+		this.name = "Lion"; 
+	}
+
+	public Animal(String name){
+		this.name = name;
+	}
+  }
+
+  Animal a = new Animal("tiger");
+  System.out.println(a.name); 
+
+  Animal b = new Animal(); 
+  System.out.println(b.name); 
+  
+  output: tiger
+          Lion
+          
+          
+c.)
+   class Foo{
+	public void doIt(int number){
+		System.out.println("A");
+	}
+
+	public void doIt(String string){
+		System.out.println("B");
+	}
+   }
+
+   class Bar extends Foo{
+	public void doIt(float number){
+		System.out.println("C");
+	}
+   }
+
+   Bar x = new Bar();
+   x.doIt("hello");
+   
+  output: B

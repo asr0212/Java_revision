@@ -1,0 +1,22 @@
+a.) 
+   interface ExampleInterface1 {
+		int value1 = 10; // Line 1
+		public int value2 = 15; // Line 2
+		public static int value3 = 20; // Line 3
+		public static final int value4 = 25; // Line 4
+		private int value5 = 10; // Line 5
+   }
+   
+   line 5 gives error because in an interface we can not declare a private variable.
+   
+b.)
+   interface ExampleInterface1 {
+		void method1();
+
+		default void method5() {
+				System.out .println("Method5");
+		}
+   }
+   
+   it can not give any error beacuse in newer version of java we can define a implemented
+   default method in an interface.
