@@ -1,0 +1,16 @@
+1. select name from Products;
+2. select name,price from Products;
+3. select name from Products WHERE price <= 200;
+4. select * from Products WHERE price BETWEEN 60 AND 120;
+5. select name,price*100 from Products;
+6. select Avg(price) from Products;
+7. select avg(price) from Products WHERE Manufacturer = 2;
+8. select count(price) from Products WHERE price >= 180;
+9. select name,price from Products WHERE price >= 180 ORDER BY price DESC,name ASC;
+10. select * from Products,Manufacturers WHERE manufacturer = Manufacturers.Code;
+11. select Products.Name,price,Manufacturers.Name from Products,Manufacturers WHERE manufacturer = Manufacturers.Code;
+12. select avg(price),manufacturer from Products GROUP BY manufacturer;
+13. select avg(price),Manufacturers.Name from Products,Manufacturers WHERE manufacturer = Manufacturers.Code GROUP BY manufacturer;
+14. select Manufacturers.Name from Products,Manufacturers WHERE manufacturer = Manufacturers.Code GROUP BY manufacturer HAVING avg(price) >=180;
+15. select name,min(price) from Products;
+16. select Manufacturers.Name,Products.name,price from Products,Manufacturers WHERE manufacturer = Manufacturers.Code GROUP BY manufacturer HAVING max(price);
